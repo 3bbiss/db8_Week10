@@ -47,5 +47,45 @@ public class DAL
     {
         DB.Update<Category>(cat);
     }
+
     // CRUD operations for Product table
+    // Read all
+    public static List<Product> GetAllProducts()
+    {
+        return DB.GetAll<Product>().ToList();
+    }
+
+    // Read one
+    public static Product GetOneProduct(int id)
+    {
+        return DB.Get<Product>(id);
+    }
+
+    // Create one (insert)
+    public static Product InsertProduct(Product prod)
+    {
+        // The insert function takes an instance of Product,
+        // so the insert function knows what class and
+        // therefore what table to use.
+        DB.Insert(prod);
+        //DB.Insert<Product>(prod);
+        return prod;
+    }
+
+    // Delete one
+    public static void DeleteProduct(int id)
+    {
+        Product prod = new Product() { id = id};
+        DB.Delete(prod);
+        //DB.Delete<Product>(prod);
+        // same thing here for not needing to include type
+    }
+
+    // Update one 
+    public static void UpdateProduct(Product prod)
+    {
+        // same thing here for not needing to include type
+        DB.Update<Product>(prod);
+    }
+
 }
