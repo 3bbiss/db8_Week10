@@ -28,6 +28,13 @@ namespace GroceryCrudDemo.Controllers
             return View(cat);
         }
 
+
+        public IActionResult ConfirmDelete(string id)
+        {
+            ViewData["categoryid"] = id;
+            return View();
+        }
+
         public IActionResult Delete(string id)
         {
             DAL.DeleteCategory(id);

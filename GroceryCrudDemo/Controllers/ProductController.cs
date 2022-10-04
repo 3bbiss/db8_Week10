@@ -31,7 +31,8 @@ namespace GroceryCrudDemo.Controllers
         // 2. A route browser calls when form is submitted
         public IActionResult AddForm()
         {
-            return View();
+            List<Category> cats = DAL.GetAllCategories();
+            return View(cats);
         }
 
         public IActionResult Add(Product prod)
@@ -47,6 +48,8 @@ namespace GroceryCrudDemo.Controllers
         public IActionResult EditForm(int id)
         {
             //Product prod = DAL.GetOneProduct(id);
+            //ViewBag.Categories = DAL.GetAllCategories();
+            ViewData["categories"] = DAL.GetAllCategories();
             return View(DAL.GetOneProduct(id));
         }
 

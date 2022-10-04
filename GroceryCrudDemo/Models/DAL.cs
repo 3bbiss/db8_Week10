@@ -36,6 +36,21 @@ public class DAL
     // Delete one 
     public static void DeleteCategory(string id)
     {
+        // Delete all products in this category.
+        // Use Dapper's tool to prevent SQL Injection
+        // Example: id is FRUIT
+        // We're building an anonymous object that looks like this:
+        //
+        //  {
+        //      catid = "FRUIT
+        //  }
+        // Dapper will then find @catid and replace it with 'FRUIT' 
+        // to build the SQL string.
+        // example:
+        //  delete from product where category=@catid
+        //  delete from product where category='FRUIT'
+        DB.Execute("delete from product where category=@catid", new {catid=id});
+
         Category cat = new Category();
         cat.id = id;
         //Category cat = new Category() { id = id };
