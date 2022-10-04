@@ -1,0 +1,18 @@
+﻿@model List<Department>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a href="/department/addform">Add New Department</a> <br />
+
+@foreach (Department dep in Model){
+    <div>
+        @dep.name in @dep.location
+        <a href="/department/detail/@dep.id">Detail</a>
+        <a href="/department/delete/@dep.id">Delete</a>
+        <a href="/department/editform/@dep.id">Edit</a>
+    </div>
+}
