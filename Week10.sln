@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroceryCrudDemo", "GroceryCrudDemo\GroceryCrudDemo.csproj", "{3C446AC8-F1CF-452B-8CF6-0CC1F1C431A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessCrudDemo", "BusinessCrudDemo\BusinessCrudDemo.csproj", "{B8405F35-5437-4D5A-9A82-F850C71F4A23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessCrudDemo", "BusinessCrudDemo\BusinessCrudDemo.csproj", "{B8405F35-5437-4D5A-9A82-F850C71F4A23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessV2Demo", "BusinessV2Demo\BusinessV2Demo.csproj", "{7985AB0D-EBFA-44C9-A61D-B198DA38A88F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B8405F35-5437-4D5A-9A82-F850C71F4A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8405F35-5437-4D5A-9A82-F850C71F4A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8405F35-5437-4D5A-9A82-F850C71F4A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7985AB0D-EBFA-44C9-A61D-B198DA38A88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7985AB0D-EBFA-44C9-A61D-B198DA38A88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7985AB0D-EBFA-44C9-A61D-B198DA38A88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7985AB0D-EBFA-44C9-A61D-B198DA38A88F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
