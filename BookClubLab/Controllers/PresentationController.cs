@@ -15,5 +15,11 @@ namespace BookClubLab.Controllers
             DAL.DeletePresentation(id);
             return Redirect("/presentation");
         }
+
+        public IActionResult Detail(int id)
+        {
+            return View(DAL.GetOnePresentation(id));
+        }
+
     }
 }
