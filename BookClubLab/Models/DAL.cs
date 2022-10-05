@@ -7,7 +7,8 @@ namespace BookClubLab.Models
 {
     public class DAL
     {
-        public static MySqlConnection DB = new MySqlConnection("Server=127.0.0.1;Database=bookclub;Uid=root;Pwd=abc123;");
+        //public static MySqlConnection DB = new MySqlConnection("Server=127.0.0.1;Database=bookclub;Uid=root;Pwd=abc123;");
+        public static MySqlConnection DB;
 
 
         public static List<Person> GetAllPeople()
