@@ -76,5 +76,12 @@ namespace BookClubLab.Controllers
             DAL.DeletePerson(id);
             return Redirect("/person");
         }
+
+
+        public IActionResult Detail(int id)
+        {
+            return View(DAL.GetOnePeople(id));
+        }
+
     }
 }
