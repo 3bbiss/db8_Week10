@@ -57,12 +57,12 @@ namespace BookClubLab.Controllers
             }
             else
             {
-                List<Presentation> presentations = DAL.GetAllPresentations();
+                List<Person> people = DAL.GetAllPeople();
                 ViewBag.presentationDate = pres.presentationDate;
                 ViewBag.bookTitle = pres.bookTitle;
                 ViewBag.bookAuthor = pres.bookAuthor;
                 ViewBag.genre = pres.genre;
-                return View("AddForm", presentations);
+                return View("AddForm", people);
             }
         }
 
