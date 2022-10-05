@@ -51,5 +51,30 @@ namespace BookClubLab.Controllers
             }
         }
 
+
+        public IActionResult EditForm(int id)
+        {
+            //Person per = DAL.GetOnePeople(id);
+            //return View(per);
+            return View(DAL.GetOnePeople(id));
+        }
+
+        public IActionResult SaveChanges(Person per)
+        {
+            DAL.UpdatePerson(per);
+            return Redirect("/person");
+        }
+
+        public IActionResult ConfirmDelete(int id)
+        {
+            Person per = DAL.GetOnePeople(id);
+            return View(per);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            DAL.DeletePerson(id);
+            return Redirect("/person");
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace BookClubLab.Models
             DB.Execute("delete from presentation where personid=@personid", new {personid = id});
 
             Person per = new Person() { id = id};
-            DB.Delete<Person>(per);
+            DB.Delete(per);
         }
 
         public static void UpdatePerson(Person per)

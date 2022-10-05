@@ -1,0 +1,11 @@
+﻿@model Person
+@{
+    ViewData["Title"] = "ConfirmDelete";
+}
+
+<h1>Are you sure you want to delete that?</h1>
+
+Delete Person: @Model.firstname @Model.lastname?
+
+<div><a href="/person/delete/@Model.id">Yes, delete</a></div>
+<div><a href="/person">No, cancel</a></div>
