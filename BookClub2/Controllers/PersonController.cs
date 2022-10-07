@@ -11,6 +11,14 @@ namespace BookClub2.Controllers
             return View(people);
         }
 
+
+        public IActionResult Detail(int id)
+        {
+            //DAL.GetOnePerson(id);
+            //return View(id);
+            return View(DAL.GetOnePerson(id));
+        }
+
         public IActionResult AddForm()
         {
             return View();
@@ -88,11 +96,22 @@ namespace BookClub2.Controllers
                 ViewBag.lastname = per.lastname;
                 ViewBag.email = per.email;
                 //return View("EditForm");
-                // WHY DIDN'T THIS WORK???
+                // WHY DIDN'T THIS WORK??? (above line)
                 return View("EditForm", new Person { id = per.id });
             }
         }
 
+        public IActionResult ConfirmDelete(int id)
+        {
+            Person per = DAL.GetOnePerson(id);
+            return View(per);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            DAL.DeletePerson(id);
+            return Redirect("/person");
+        }
 
 
     }

@@ -12,6 +12,7 @@ create table person(
 
 insert into person (firstname, lastname, email) values('John', 'Smith', 'js@rm.com');
 select * from person;
+select * from presentation;
 
 create table presentation(
 	id int not null auto_increment,
@@ -23,3 +24,6 @@ create table presentation(
 	primary key (id),
 	foreign key (personid) references person(id)
 );
+
+
+insert into presentation (personid, presentationdate, booktitle, bookauthor, genre) values(1, '2022-08-19', "Book6", "Smith", "Fiction");

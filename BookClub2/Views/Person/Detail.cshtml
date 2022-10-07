@@ -1,0 +1,18 @@
+﻿@model Person;
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Details about @Model.firstname @Model.lastname</h1>
+
+<ul>
+    <li>
+        First Name: @Model.firstname
+    </li>
+    <li>
+        Last Name: @Model.lastname
+    </li>
+    <li>
+        Email: @Model.email
+    </li>
+</ul>
