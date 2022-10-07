@@ -21,5 +21,52 @@ namespace BookClub2.Controllers
             DAL.DeletePresentation(id);
             return Redirect("/presentation");
         }
+
+        public IActionResult AddForm()
+        {
+            List<Person> people = DAL.GetAllPeople();
+            return View(people);
+        }
+
+        public IActionResult Add(Presentation pres)
+        {
+            bool isValid = true;
+
+            if (pres.presentationdate == null)
+            {
+                isValid = false;
+                ViewBag.presentationdateMessage = "Enter a date";
+            }
+            if (pres.booktitle == null)
+            {
+                isValid = false;
+                ViewBag.booktitleMessage = "Enter a title";
+            }
+            if (pres.bookauthor == null)
+            {
+                isValid = false;
+                ViewBag.bookauthorMessage = "Enter an author";
+            }
+            if (pres.genre == null)
+            {
+                isValid = false;
+                ViewBag.genreMessage = "Enter a genre";
+            }
+            if (isValid)
+            {
+                DAL.InsertPresentation(pres);
+                return Redirect("/presentation");
+            }
+            else
+            {
+                List<Person> people = DAL.GetAllPeople();
+                ViewBag.presentationdate = pres.presentationdate;
+                ViewBag.booktitle = pres.booktitle;
+                ViewBag.bookauthor = pres.bookauthor;
+                ViewBag.genre = pres.genre;
+                return View("AddForm", people);
+            }
+        }
+
     }
 }

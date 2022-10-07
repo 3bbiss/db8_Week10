@@ -1,0 +1,23 @@
+﻿@model List<Person>
+@{
+    ViewData["Title"] = "AddForm";
+}
+
+<h1>Add a Presentation</h1>
+
+<form method="post" action="/presentation/add">
+    Presentor(PersonID):
+    <select name="personid" required>
+        @foreach(Person per in Model){
+            <option value="@per.id">@per.firstname @per.lastname</option>
+        }
+    </select>
+
+    <br/>
+
+    Presentation Date: <input type="date" name="presentationdate" value="@ViewBag.presentationdate" /> <span style="font-weight:bold; color:red">@ViewBag.presentationdateMessage</span> <br />
+    Book Title: <input type="text" name="booktitle" value="@ViewBag.booktitle" /> <span style="font-weight:bold; color:red">@ViewBag.booktitleMessage</span> <br />
+    Book Author: <input type="text" name="bookauthor" value="@ViewBag.bookauthor" /> <span style="font-weight:bold; color:red">@ViewBag.bookauthorMessage</span> <br />
+    Book Genre: <input type="text" name="genre" value="@ViewBag.genre" /> <span style="font-weight:bold; color:red">@ViewBag.genreMessage</span> <br />
+    <input type="submit" value="Save"/>
+</form>
