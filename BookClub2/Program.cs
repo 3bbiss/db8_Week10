@@ -1,5 +1,5 @@
-using BookClubLab.Models;
 using MySql.Data.MySqlClient;
+using BookClub2.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);

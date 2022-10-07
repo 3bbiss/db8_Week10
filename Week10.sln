@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessCrudDemo", "Busines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessV2Demo", "BusinessV2Demo\BusinessV2Demo.csproj", "{7985AB0D-EBFA-44C9-A61D-B198DA38A88F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookClubLab", "BookClubLab\BookClubLab.csproj", "{FEC1FCA6-1D80-4B07-86F0-09E285F888E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookClubLab", "BookClubLab\BookClubLab.csproj", "{FEC1FCA6-1D80-4B07-86F0-09E285F888E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookClub2", "BookClub2\BookClub2.csproj", "{713F2C46-FBB7-45F2-8AA1-05187251A108}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FEC1FCA6-1D80-4B07-86F0-09E285F888E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEC1FCA6-1D80-4B07-86F0-09E285F888E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEC1FCA6-1D80-4B07-86F0-09E285F888E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713F2C46-FBB7-45F2-8AA1-05187251A108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713F2C46-FBB7-45F2-8AA1-05187251A108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713F2C46-FBB7-45F2-8AA1-05187251A108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713F2C46-FBB7-45F2-8AA1-05187251A108}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
