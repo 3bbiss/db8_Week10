@@ -1,0 +1,24 @@
+﻿@*@model List<Person>;*@
+
+@{
+    ViewData["Title"] = "AddForm";
+}
+
+<h1>Add a Person</h1>
+
+<form method="post" action="/person/add">
+
+    First Name: <input type="text" name="firstname"/>
+    <span style="font-weight:bold; color:red">@ViewBag.firstnameMessage</span>
+    <br />
+    
+    Last Name: <input type="text" name="lastname"/>
+    <span style="font-weight:bold; color:red">@ViewBag.lastnameMessage</span>
+    <br />
+
+    Email: <input type="email" name="email"/>
+    <span style="font-weight:bold; color:red">@ViewBag.emailMessage</span>
+    <br />
+    
+    <input type="submit" value="Save"/>
+</form>

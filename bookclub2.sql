@@ -10,6 +10,9 @@ create table person(
 	primary key (id)
 );
 
+insert into person (firstname, lastname, email) values('John', 'Smith', 'js@rm.com');
+select * from person;
+
 create table presentation(
 	id int not null auto_increment,
 	personid int,
