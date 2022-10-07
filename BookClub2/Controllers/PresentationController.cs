@@ -68,5 +68,18 @@ namespace BookClub2.Controllers
             }
         }
 
+
+        public IActionResult EditForm(int id)
+        {
+            ViewData["people"] = DAL.GetAllPeople();
+            return View(DAL.GetOnePresentation(id));   
+        }
+
+        public IActionResult SaveChanges(Presentation pres)
+        {
+            DAL.UpdatePresentation(pres);
+            return Redirect("/presentation");
+        }
+
     }
 }
