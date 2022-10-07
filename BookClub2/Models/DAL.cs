@@ -67,18 +67,3 @@ namespace BookClub2.Models
 
     }
 }
-
-
-
-
-
-
-
-
-/*
-GetAllPeople: Returns a list of Person instances; no parameters
-GetOnePerson: Returns a single Person instance; parameter is an ID
-InsertPerson: Returns a Person instance; parameter is a Person instance with all but ID filled in
-DeletePerson: Returns void; parameter is the ID of the Person to delete
-UpdatePerson: Returns void; parameter is the Person instance to update 
- */
