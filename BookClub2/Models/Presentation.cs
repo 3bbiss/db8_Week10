@@ -8,8 +8,8 @@ namespace BookClub2.Models
         public int id { get; set; }
         public int personid { get; set; }
         public DateTime presentationdate { get; set; }
-        public string title { get; set; }
-        public string author { get; set; }
+        public string booktitle { get; set; }
+        public string bookauthor { get; set; }
         public string genre { get; set; }
     }
 }

@@ -1,0 +1,17 @@
+﻿@model Presentation
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>@Model.booktitle Details</h1>
+
+@Model.booktitle @Model.genre @Model.bookauthor
+
+<ul>
+    <li>
+        Presentation on Book: @Model.booktitle (@Model.genre) by @Model.bookauthor
+    </li>
+    <li>
+        Presented on @Model.presentationdate
+    </li>
+</ul>

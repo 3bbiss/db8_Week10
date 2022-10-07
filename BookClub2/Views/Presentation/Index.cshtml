@@ -1,0 +1,16 @@
+﻿@model List<Presentation>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Presentations Page</h1>
+
+
+@foreach (Presentation pres in Model){
+    <div>
+        Presentor ID: (@pres.personid) @pres.booktitle (@pres.genre) by @pres.bookauthor on @pres.presentationdate
+        <a href="/presentation/detail/@pres.id">Details</a>
+        <a href="/presentation/editform/@pres.id">Edit</a>
+        <a href="/presentation/delete/@pres.id">Delete</a>
+    </div>
+}
